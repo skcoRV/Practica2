@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Área de registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/css.css" type="text/css"/>
+    </head><br><br>
+    <body>
+        <img src="images/phoneshopblanco.jpg" alt=""/>
+        <div class="mymenu">
+            <ul class="menulist">
+                <li><a href="/phoneShop/index.html"> Inicio </a></li>
+                <li><a href="/phoneShop/empresa.html"> Empresa </a></li>
+                <li><a href="/phoneShop/contacto.html"> Contacto </a></li>
+                <li><a href="/phoneShop/tienda.html"> Tienda virtual </a></li>
+                <li><a href="/phoneShop/cesta.html"> Cesta de la compra </a></li>
+                <li><a href="/phoneShop/usuario.html"> Usuario </a></li>
+                <li><a href="/phoneShop/admin.html"> Administrador </a></li>
+            </ul>
+        </div>
+        <form action=procesar.cgi method="POST">
+            <table>
+                <b>Formulario de petición de datos</b> <br>
+                <tr>
+                    <td align="left"> Nombre completo*</td>
+                    <td><input type="text" name="nombrecompleto"  placeholder="Campo obligatorio" size="20" maxlength="150" required/></td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Email* </td>
+                    <td><input type="email" name="email" placeholder="Campo obligatorio" size="20" maxlength="100" required/> </td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Teléfono* </td>
+                    <td><input type="text" pattern="[0-9]*" name="telefono" placeholder="Campo obligatorio" size="20" maxlength="9" required/> </td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Fecha de nacimiento </td>
+                    <td><input type="date" name="nacimiento" placeholder="Campo obligatorio" required/> </td>
+                </tr>
+                
+                <tr>
+                    <td align="left"> Dirección </td>
+                    <td><input type="text" placeholder="No introduzca aquí número ni puerta" pattern="[A-Za-Z0-9]*" name="direccion" size="20" maxlength="100" required/> </td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <td align="left"> Numero </td>
+                    <td><input type="text" pattern="[0-9]*" name="numero" size="20" maxlength="5"/> </td>
+                </tr>
+                
+                <tr>
+                    <td align="left"> Puerta </td>
+                    <td><input type="text" pattern="[0-9]*" name="puerta" size="20" maxlength="5"/> </td>
+                </tr>
+                
+                <tr>
+                    <td align="left"> Población </td>
+                    <td><input type="text" name="poblacion" size="20" maxlength="50" required/></td>
+                </tr>
+                
+                <tr>
+                    <td align="left"> Código postal </td>
+                    <td><input type="text" pattern="[0-9]*" name="codigopostal" size="20" maxlength="5" required/> </td>
+                </tr>
+
+                
+                <tr>
+                    <td align="left"> Estado civil </td>
+                    <td><select>
+                        <option value="" disabled selected hidden>Escoja</option>
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="separado">Separado</option>
+                        <option value="separado">Más solo que la una</option>
+                    </select></td>
+
+                </tr>
+
+                <tr>
+                    <td align="left">¿Cómo nos conoció?</td>
+                    <td><input type="radio" name="seleccion" value="google"> Google </td>
+                    <td><input type="radio" name="seleccion" value="publicidad"> Publicidad </td>
+                    <td><input type="radio" name="seleccion" value="recomendado"> Recomendado </td>
+                    <td><input type="radio" name="seleccion" value="otros"> Otros: indicar en Descripción</td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Descripción </td>
+                    <td><textarea rows="2" cols="20"></textarea></td>
+                </tr>
+
+                <tr>
+                        <td><input type="reset" value="Vaciar formulario"/></td>
+                        <td><input type="submit" value="Enviar formulario"/></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </body>
+</html>

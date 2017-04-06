@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Área de contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+
+        <style>
+            #map {
+                height:500px;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mymenu">
+            <img src="images/phoneshopblanco.jpg" alt=""/>
+            <ul class="menulist">
+                <li><a href="/phoneShop/index.html"> Inicio </a></li>
+                <li><a href="/phoneShop/empresa.html"> Empresa </a></li>
+                <li><a href="/phoneShop/contacto.html"> Contacto </a></li>
+                <li><a href="/phoneShop/tienda.html"> Tienda virtual </a></li>
+                <li><a href="/phoneShop/cesta.html"> Cesta de la compra </a></li>
+                <li><a href="/phoneShop/usuario.html"> Usuario </a></li>
+                <li><a href="/phoneShop/admin.html"> Administrador </a></li>
+            </ul>
+            <br /><br />
+        </div>
+        <h2>Contacto</h2>
+        Rellene el formulario si desea contactar con nosotros. <br> <br>
+
+        <form action=procesar.cgi method="POST">
+            <table>
+                <b>Formulario de petición de datos</b> <br>
+                <tr>
+                    <td align="left"> Nombre completo*</td>
+                    <td><input type="text" name="nombrecompleto"  placeholder="Campo obligatorio" size="20" maxlength="150" required/></td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Email*</td>
+                    <td><input type="email" name="email" placeholder="Campo obligatorio" size="20" maxlength="100" required/> </td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Teléfono </td>
+                    <td><input type="text" pattern="[0-9]*" name="telefono" size="20" maxlength="9"/> </td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Población </td>
+                    <td><input type="text" name="poblacion" size="20" maxlength="50" /></td>
+                </tr>
+
+                <tr>
+                    <td align="left"> Consulta*</td>
+                    <td><textarea rows="2" cols="20" placeholder="Campo obligatorio" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><input type="reset" value="Vaciar formulario"/></td>
+                    <td><input type="submit" value="Enviar formulario"/></td>
+                </tr>
+
+
+            </table>
+        </form>
+        <br>
+
+        <h2> Datos de la empresa </h2>
+
+        <h3> Horario de atención al cliente</h3>
+        <b>Viernes:</b> 10:00 - 11:00
+
+        <h3>Teléfono de contacto</h3>
+        <b>Fijo:</b> 961658778
+        <b>Movil:</b> 659896252
+
+        <h3> ¿Dónde estamos? </h3>
+
+        <b>Nuestra dirección es:</b> Avinguda de l'Universitat, s/n, 46100 Burjassot, Valencia <br><br>
+
+        Para mayor facilidad, encuéntrenos en Google Maps: <br><br>
+
+        <!--<img src="images/localizacion.JPG" alt=""/>-->
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 39.5123445, lng: -0.4253915};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 18,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBujIdbNUcGAe5cIVq26N851AiF8-eCSPw&callback=initMap">
+        </script>
+
+    </body>
+</html>

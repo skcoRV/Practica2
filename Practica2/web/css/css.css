@@ -1,0 +1,56 @@
+h1{
+    color:red;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.mymenu {
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.menulist > li {
+    float:left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menulist li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.menulist li a:hover {
+    background-color:grey;
+}
+
+.product-list{
+    display:inline-block;
+}
+
+.producto{
+    display:block;
+    margin:10px;
+    padding:10px;
+    float:left;
+}
+
+.producto{
+    
+    height: 300px;
+}
+
+.producto > img{
+    
+    align:center;
+}
